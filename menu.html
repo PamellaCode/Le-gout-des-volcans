@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Le Goût des Volcans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mousse': '#8F9779',
+                        'terracotta': '#E2725B',
+                        'cream': '#F5F5DC',
+                    },
+                    fontFamily: {
+                        'handwriting': ['Dancing Script', 'cursive'],
+                        'serif': ['Cormorant Garamond', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream font-sans">
+    <!-- Navigation -->
+    <nav class="bg-mousse text-cream p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-handwriting">Le Goût des Volcans</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-terracotta transition">Accueil</a>
+                <a href="histoire.html" class="hover:text-terracotta transition">Notre Histoire</a>
+                <a href="cuisine.html" class="hover:text-terracotta transition">Notre Cuisine</a>
+                <a href="menu.html" class="hover:text-terracotta transition">Menu</a>
+                <a href="contact.html" class="hover:text-terracotta transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[40vh]">
+        <div class="absolute inset-0 bg-black/30 z-10"></div>
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3" 
+             alt="Plats du restaurant" 
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 flex items-center justify-center z-20 text-center">
+            <h1 class="text-5xl md:text-7xl font-handwriting text-cream">Notre Menu de la Semaine</h1>
+        </div>
+    </section>
+
+    <!-- Intro Text -->
+    <section class="py-12">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <p class="text-lg font-serif text-center text-gray-700">
+                Nous changeons notre menu chaque semaine selon les produits de saison, le marché local et notre inspiration. Tout est fait maison, bio et zéro déchet.
+            </p>
+        </div>
+    </section>
+
+    <!-- Formules -->
+    <section class="py-12 bg-mousse/10">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-handwriting text-mousse text-center mb-8">Nos Formules</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Formule Déjeuner -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="text-4xl mb-4">🥄</div>
+                    <h3 class="text-2xl font-handwriting text-mousse mb-2">Formule Déjeuner</h3>
+                    <p class="text-gray-600 mb-4">Entrée + Plat ou Plat + Dessert</p>
+                    <p class="text-2xl font-serif text-terracotta">14€</p>
+                </div>
+
+                <!-- Formule Complète -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="text-4xl mb-4">🍽️</div>
+                    <h3 class="text-2xl font-handwriting text-mousse mb-2">Formule Complète</h3>
+                    <p class="text-gray-600 mb-4">Entrée + Plat + Dessert</p>
+                    <p class="text-2xl font-serif text-terracotta">18€</p>
+                </div>
+
+                <!-- Formule Végétale -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="text-4xl mb-4">🌿</div>
+                    <h3 class="text-2xl font-handwriting text-mousse mb-2">Formule Végétale</h3>
+                    <p class="text-gray-600 mb-4">100% végétarienne</p>
+                    <p class="text-2xl font-serif text-terracotta">16€</p>
+                </div>
+
+                <!-- Formule Vegan -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="text-4xl mb-4">🌱</div>
+                    <h3 class="text-2xl font-handwriting text-mousse mb-2">Formule Vegan</h3>
+                    <p class="text-gray-600 mb-4">100% végétalien</p>
+                    <p class="text-2xl font-serif text-terracotta">16€</p>
+                </div>
+
+                <!-- Menu Enfant -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-2">🧒</span>
+                        <h3 class="text-2xl font-handwriting text-mousse">Menu Enfant</h3>
+                    </div>
+                    <p class="text-terracotta font-serif mb-4">10€</p>
+                    <p class="text-gray-600 mb-4">Plat + Dessert + Boisson</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carte des Plats -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-handwriting text-mousse text-center mb-12">À la Carte</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Entrées -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-2">🥗</span>
+                            <h3 class="text-2xl font-handwriting text-mousse">Entrées</h3>
+                        </div>
+                        <span class="text-terracotta font-serif">5,50€</span>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="font-serif">
+                            <p class="text-lg">Soupe d'épluchures aux herbes sauvages</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Salade de lentilles blondes aux noix</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Tarte fine aux oignons confits & crème de tomme</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Plats -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-2">🍖</span>
+                            <h3 class="text-2xl font-handwriting text-mousse">Plats</h3>
+                        </div>
+                        <span class="text-terracotta font-serif">9,50€</span>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="font-serif">
+                            <p class="text-lg">Croquettes de fromage à la tomme fondue</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Potée auvergnate revisitée</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Œuf mollet, purée de légumes oubliés & chips de panais</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Desserts -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-2">🧁</span>
+                            <h3 class="text-2xl font-handwriting text-mousse">Desserts</h3>
+                        </div>
+                        <span class="text-terracotta font-serif">5,50€</span>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="font-serif">
+                            <p class="text-lg">Pain perdu salé au bleu d'Auvergne</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Compotée de pommes locales</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Gâteau moelleux à la peau de banane</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menus Spéciaux -->
+    <section class="py-12 bg-mousse/10">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-handwriting text-mousse text-center mb-12">Menus Spéciaux</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Menu Végétal -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-2">🌿</span>
+                        <h3 class="text-2xl font-handwriting text-mousse">Menu Végétal</h3>
+                    </div>
+                    <p class="text-terracotta font-serif mb-4">16€</p>
+                    <ul class="space-y-4">
+                        <li class="font-serif">
+                            <p class="text-lg">Velouté de fanes de carottes & crème d'avoine</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Dahl de lentilles vertes, légumes de saison</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Poire pochée au miel de montagne</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Menu Vegan -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-2">🌱</span>
+                        <h3 class="text-2xl font-handwriting text-mousse">Menu Vegan</h3>
+                    </div>
+                    <p class="text-terracotta font-serif mb-4">16€</p>
+                    <ul class="space-y-4">
+                        <li class="font-serif">
+                            <p class="text-lg">Carpaccio de betterave & graines toastées</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Risotto de petit épeautre aux légumes rôtis</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Mousse au chocolat noir (aquafaba)</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Menu Enfant -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-2">🧒</span>
+                        <h3 class="text-2xl font-handwriting text-mousse">Menu Enfant</h3>
+                    </div>
+                    <p class="text-terracotta font-serif mb-4">10€</p>
+                    <ul class="space-y-4">
+                        <li class="font-serif">
+                            <p class="text-lg">Mini hachis parmentier à la viande bio d'Auvergne</p>
+                            <p>Ou</p>
+                            <p class="text-lg">Mini croquette de fromage & petit gratin de légumes</p>
+                        </li>
+                        
+                        <li class="font-serif">
+                            <p class="text-lg">Moelleux au chocolat</p>
+                            <p>Ou</p>
+                            <p class="text-lg">Compote pomme-banane maison</p>
+                        </li>
+                
+                        <li class="font-serif">
+                            <p class="text-lg">Jus de pomme artisanal</p>
+                            <p>Ou</p>
+                            <p class="text-lg">Eau plate</p>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Button -->
+    <div class="py-12 text-center">
+        <a href="contact.html" 
+           class="inline-block bg-terracotta text-cream px-8 py-3 rounded-lg hover:bg-terracotta/80 transition font-handwriting text-xl">
+            Réserver une table
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-mousse text-cream py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">Fait maison – Produits locaux – Respect de la nature</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-terracotta text-cream p-3 rounded-full shadow-lg hover:bg-terracotta/80 transition opacity-0 invisible">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <script>
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html> 

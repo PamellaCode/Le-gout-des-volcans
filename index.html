@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Goût des Volcans - Restaurant Bio à Clermont-Ferrand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mousse': '#8F9779',
+                        'terracotta': '#E2725B',
+                        'cream': '#F5F5DC',
+                    },
+                    fontFamily: {
+                        'handwriting': ['Dancing Script', 'cursive'],
+                        'sans': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream font-sans">
+    <!-- Navigation -->
+    <nav class="bg-mousse text-cream p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-handwriting">Le Goût des Volcans</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-terracotta transition">Accueil</a>
+                <a href="histoire.html" class="hover:text-terracotta transition">Notre Histoire</a>
+                <a href="cuisine.html" class="hover:text-terracotta transition">Notre Cuisine</a>
+                <a href="menu.html" class="hover:text-terracotta transition">Menu</a>
+                <a href="contact.html" class="hover:text-terracotta transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="relative h-screen">
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3" 
+             alt="Restaurant ambiance" 
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 flex items-center justify-center z-20 text-center">
+            <div class="text-cream">
+                <h2 class="text-5xl md:text-7xl font-handwriting mb-4">Le Goût des Volcans</h2>
+                <p class="text-2xl md:text-3xl italic">Du local dans l'assiette, du cœur en cuisine</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre Histoire -->
+    <section id="histoire" class="py-20 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-handwriting text-mousse text-center mb-12">Notre Histoire</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-lg mb-4">Nés au pied des volcans, Julie, Marc et Clara ont décidé de faire de leur passion pour la nature et la cuisine un art de vivre.</p>
+                    <p class="text-lg mb-4">Ensemble, ils ont créé Le Goût des Volcans : un petit restaurant où l'on sert des plats bio, locaux, et sincèrement bons. Ici, pas de chichi – juste du goût, du cœur, et une cuisine respectueuse des saisons et de la planète.</p>
+                </div>
+                <img src="./Images/adrien-brun-9j3tYXK6vH4-unsplash.jpg" 
+                     alt="Équipe du restaurant" 
+                     class="rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre Cuisine -->
+    <section id="cuisine" class="py-20 bg-mousse text-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-handwriting text-center mb-12">Notre Cuisine</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-terracotta/20 p-6 rounded-lg">
+                    <h3 class="text-2xl font-handwriting mb-4">Produits Locaux</h3>
+                    <p>Légumes bio, fromages d'Auvergne, lentilles blondes, charcuterie locale... Tous nos produits sont sélectionnés avec soin auprès des producteurs de la région.</p>
+                </div>
+                <div class="bg-terracotta/20 p-6 rounded-lg">
+                    <h3 class="text-2xl font-handwriting mb-4">Recettes Originales</h3>
+                    <p>Soupe d'épluchures aux herbes sauvages, Croquettes de fromage à la tomme fondue, Pain perdu salé au bleu d'Auvergne... Des créations uniques qui subliment les produits locaux.</p>
+                </div>
+                <div class="bg-terracotta/20 p-6 rounded-lg">
+                    <h3 class="text-2xl font-handwriting mb-4">Zéro Déchet</h3>
+                    <p>Compost, recyclage, bocaux, cuisine intégrale des aliments... Notre démarche zéro déchet est au cœur de notre engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-mousse/10">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-handwriting text-mousse text-center mb-12">Notre Menu de la Semaine</h2>
+            
+            <!-- Formules -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+                <!-- Formule Déjeuner -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="text-4xl mb-4">🥄</div>
+                    <h3 class="text-2xl font-handwriting text-mousse mb-2">Formule Déjeuner</h3>
+                    <p class="text-gray-600 mb-4">Entrée + Plat ou Plat + Dessert</p>
+                    <p class="text-2xl font-serif text-terracotta">14€</p>
+                </div>
+
+                <!-- Formule Complète -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="text-4xl mb-4">🍽️</div>
+                    <h3 class="text-2xl font-handwriting text-mousse mb-2">Formule Complète</h3>
+                    <p class="text-gray-600 mb-4">Entrée + Plat + Dessert</p>
+                    <p class="text-2xl font-serif text-terracotta">18€</p>
+                </div>
+
+                <!-- Formule Végétale -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="text-4xl mb-4">🌿</div>
+                    <h3 class="text-2xl font-handwriting text-mousse mb-2">Formule Végétale</h3>
+                    <p class="text-gray-600 mb-4">100% végétarienne</p>
+                    <p class="text-2xl font-serif text-terracotta">16€</p>
+                </div>
+            </div>
+
+            <!-- Exemple de Menu -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- Entrées -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-2">🥗</span>
+                            <h3 class="text-2xl font-handwriting text-mousse">Entrées</h3>
+                        </div>
+                        <span class="text-terracotta font-serif">5,50€</span>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="font-serif">
+                            <p class="text-lg">Soupe d'épluchures aux herbes sauvages</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Salade de lentilles blondes aux noix</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Tarte fine aux oignons confits & crème de tomme</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Plats -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-2">🍖</span>
+                            <h3 class="text-2xl font-handwriting text-mousse">Plats</h3>
+                        </div>
+                        <span class="text-terracotta font-serif">9,50€</span>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="font-serif">
+                            <p class="text-lg">Croquettes de fromage à la tomme fondue</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Potée auvergnate revisitée</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Œuf mollet, purée de légumes oubliés & chips de panais</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Desserts -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-2">🧁</span>
+                            <h3 class="text-2xl font-handwriting text-mousse">Desserts</h3>
+                        </div>
+                        <span class="text-terracotta font-serif">5,50€</span>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="font-serif">
+                            <p class="text-lg">Pain perdu salé au bleu d'Auvergne</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Compotée de pommes locales</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Gâteau moelleux à la peau de banane</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="menu.html" class="inline-block bg-terracotta text-cream px-8 py-3 rounded-lg hover:bg-terracotta/80 transition font-handwriting text-xl">
+                    Voir le menu complet
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-mousse text-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-handwriting text-center mb-12">Contact</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-handwriting mb-4">Informations Pratiques</h3>
+                    <p class="mb-2">📍 40 place Jaude, 63000 Clermont-Ferrand</p>
+                    <p class="mb-2">🕒 Ouvert du mardi au samedi</p>
+                    <p class="mb-2">Déjeuner : 12h - 14h</p>
+                    <p class="mb-2">Dîner : 19h - 22h</p>
+                </div>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Nom" class="w-full p-2 rounded bg-cream/20 border border-cream text-cream placeholder-cream/70">
+                    <input type="email" placeholder="Email" class="w-full p-2 rounded bg-cream/20 border border-cream text-cream placeholder-cream/70">
+                    <input type="tel" placeholder="Téléphone" class="w-full p-2 rounded bg-cream/20 border border-cream text-cream placeholder-cream/70">
+                    <textarea placeholder="Message" class="w-full p-2 rounded bg-cream/20 border border-cream h-32 text-cream placeholder-cream/70"></textarea>
+                    <button type="submit" class="bg-terracotta text-cream px-6 py-2 rounded hover:bg-terracotta/80 transition"><a href="contact.html">Réserver</a></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-mousse text-cream py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="#" class="hover:text-terracotta transition">Facebook</a>
+                <a href="#" class="hover:text-terracotta transition">Instagram</a>
+                <a href="#" class="hover:text-terracotta transition">Twitter</a>
+            </div>
+            <p class="text-sm">Fait maison – Produits locaux – Respect de la nature</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-terracotta text-cream p-3 rounded-full shadow-lg hover:bg-terracotta/80 transition opacity-0 invisible">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <script>
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html> 

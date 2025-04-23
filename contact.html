@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Réservations - Le Goût des Volcans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mousse': '#8F9779',
+                        'terracotta': '#E2725B',
+                        'cream': '#F5F5DC',
+                    },
+                    fontFamily: {
+                        'handwriting': ['Dancing Script', 'cursive'],
+                        'serif': ['Cormorant Garamond', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream font-sans">
+    <!-- Navigation -->
+    <nav class="bg-mousse text-cream p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-handwriting">Le Goût des Volcans</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-terracotta transition">Accueil</a>
+                <a href="histoire.html" class="hover:text-terracotta transition">Notre Histoire</a>
+                <a href="cuisine.html" class="hover:text-terracotta transition">Notre Cuisine</a>
+                <a href="menu.html" class="hover:text-terracotta transition">Menu</a>
+                <a href="contact.html" class="hover:text-terracotta transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[40vh]">
+        <div class="absolute inset-0 bg-black/30 z-10"></div>
+        <img src="./Images/kaoutar-aannaque-idZna0j3z_c-unsplash.jpg" 
+             alt="Restaurant ambiance" 
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 flex items-center justify-center z-20 text-center">
+            <h1 class="text-5xl md:text-7xl font-handwriting text-cream">Venez nous rencontrer !</h1>
+        </div>
+    </section>
+
+    <!-- Intro Text -->
+    <section class="py-12">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <p class="text-lg font-serif text-center text-gray-700">
+                Le Goût des Volcans vous accueille au cœur de Clermont-Ferrand, dans un cadre chaleureux et simple, à deux pas de la nature et du marché local. Que ce soit pour un déjeuner entre amis, un dîner en famille ou une pause gourmande en solo, nous serons ravis de vous recevoir !
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Left Column - Contact Info -->
+                <div class="space-y-8">
+                    <!-- Contact Info -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-handwriting text-mousse mb-6">Nos Coordonnées</h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-terracotta mt-1 mr-4"></i>
+                                <div>
+                                    <p class="font-semibold">Adresse</p>
+                                    <p>40 place Jaude, 63000 Clermont-Ferrand</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-phone text-terracotta mt-1 mr-4"></i>
+                                <div>
+                                    <p class="font-semibold">Téléphone</p>
+                                    <p>04 73 00 00 00</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope text-terracotta mt-1 mr-4"></i>
+                                <div>
+                                    <p class="font-semibold">Email</p>
+                                    <p>bonjour@legoutdesvolcans.fr</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-clock text-terracotta mt-1 mr-4"></i>
+                                <div>
+                                    <p class="font-semibold">Horaires</p>
+                                    <p>Mardi au samedi : 12h – 14h & 19h – 22h</p>
+                                    <p>Dimanche & lundi : fermé</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-handwriting text-mousse mb-6">Nous trouver</h2>
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.013463069782!2d3.0805833!3d45.777222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f71bee5a2f929d%3A0x4093cafcbe7fa6f9!2sPlace%20de%20Jaude%2C%2063000%20Clermont-Ferrand!5e0!3m2!1sfr!2sfr!4v1708101955447!5m2!1sfr!2sfr"
+                                width="100%" 
+                                height="100%" 
+                                class="w-full h-full rounded-lg"
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Reservation Form -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-handwriting text-mousse mb-6">Réserver une table</h2>
+                    <form id="reservationForm" class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 mb-2">Nom & Prénom *</label>
+                                <input type="text" required class="w-full p-2 rounded border border-gray-300 focus:border-terracotta focus:ring-1 focus:ring-terracotta">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Email *</label>
+                                <input type="email" required class="w-full p-2 rounded border border-gray-300 focus:border-terracotta focus:ring-1 focus:ring-terracotta">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Téléphone</label>
+                            <input type="tel" class="w-full p-2 rounded border border-gray-300 focus:border-terracotta focus:ring-1 focus:ring-terracotta">
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 mb-2">Date *</label>
+                                <input type="date" required class="w-full p-2 rounded border border-gray-300 focus:border-terracotta focus:ring-1 focus:ring-terracotta">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Heure *</label>
+                                <select required class="w-full p-2 rounded border border-gray-300 focus:border-terracotta focus:ring-1 focus:ring-terracotta">
+                                    <option value="">Choisir une heure</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="12:30">12:30</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="13:30">13:30</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="19:30">19:30</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="20:30">20:30</option>
+                                    <option value="21:00">21:00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Nombre de personnes *</label>
+                            <select required class="w-full p-2 rounded border border-gray-300 focus:border-terracotta focus:ring-1 focus:ring-terracotta">
+                                <option value="">Choisir le nombre</option>
+                                <option value="1">1 personne</option>
+                                <option value="2">2 personnes</option>
+                                <option value="3">3 personnes</option>
+                                <option value="4">4 personnes</option>
+                                <option value="5">5 personnes</option>
+                                <option value="6">6 personnes</option>
+                                <option value="7">7 personnes</option>
+                                <option value="8">8 personnes</option>
+                                <option value="9">9 personnes</option>
+                                <option value="10">10 personnes</option>
+                                <option value="11">11 personnes</option>
+                                <option value="12">12 personnes</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Message</label>
+                            <textarea class="w-full p-2 rounded border border-gray-300 focus:border-terracotta focus:ring-1 focus:ring-terracotta h-32"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-terracotta text-cream px-8 py-3 rounded-lg hover:bg-terracotta/80 transition font-handwriting text-xl">
+                            Réserver une table
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Links -->
+    <section class="py-12 text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="index.html" class="inline-block bg-mousse text-cream px-8 py-3 rounded-lg hover:bg-mousse/80 transition font-handwriting text-xl">
+                    Retour à l'accueil
+                </a>
+                <a href="menu.html" class="inline-block bg-terracotta text-cream px-8 py-3 rounded-lg hover:bg-terracotta/80 transition font-handwriting text-xl">
+                    Voir le menu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-mousse text-cream py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="#" class="hover:text-terracotta transition">Facebook</a>
+                <a href="#" class="hover:text-terracotta transition">Instagram</a>
+                <a href="#" class="hover:text-terracotta transition">Twitter</a>
+            </div>
+            <p class="text-sm">Fait maison – Produits locaux – Respect de la nature</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-terracotta text-cream p-3 rounded-full shadow-lg hover:bg-terracotta/80 transition opacity-0 invisible">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <script>
+        document.getElementById('reservationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Votre réservation a bien été prise en compte. Nous vous contacterons pour confirmer.');
+            this.reset();
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html> 
