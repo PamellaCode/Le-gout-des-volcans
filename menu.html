@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Le Goût des Volcans</title>
+    <meta name="description" content="Découvrez le menu du Goût des Volcans : formules déjeuner, complète, végétale et vegan, plats à la carte, menus enfant. Cuisine locale et bio à Clermont-Ferrand.">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" as="image" href="./Images/Bannière menu.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    <style>
+        @font-face {
+            font-family: 'Playball';
+            src: url('./Police/Playball/Playball-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Indie Flower';
+            src: url('./Police/Indie%20Flower/IndieFlower-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cormorant Garamond';
+            src: url('./Coromant%20Garamond/static/CormorantGaramond-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body, p, span, a, li, label, input, textarea, button, div, ul, ol, blockquote, strong, em {
+            font-family: 'Cormorant Garamond', serif !important;
+        }
+        h1, h2 {
+            font-family: 'Playball', cursive !important;
+        }
+        h3, h4, h5, h6 {
+            font-family: 'Indie Flower', cursive !important;
+        }
+        header nav,
+        header nav span,
+        header nav a {
+            font-family: 'Playball', cursive !important;
+        }
+        footer .font-playball {
+            font-family: 'Playball', cursive !important;
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(161, 158, 4, 0.4) 0%, rgba(0,0,0,0.35) 45%, rgba(161, 158, 4, 0.12) 100%);
+        }
+        .bg-nature-pattern {
+            background-color: #faf0ea;
+            background-image: radial-gradient(circle at 20% 80%, rgba(161, 158, 4, 0.08) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 20%, rgba(161, 158, 4, 0.06) 0%, transparent 45%);
+        }
+        .section-ombre {
+            box-shadow: 0 4px 24px rgba(163, 158, 4, 0.12);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mousse': '#3C5A09',
+                        'terracotta': '#f4c36f',
+                        'cream': '#FAF0EA',
+                    },
+                    fontSize: {
+                        'xs': ['1rem', { lineHeight: '1.5rem' }],
+                        'sm': ['1.0625rem', { lineHeight: '1.625rem' }],
+                        'base': ['1.25rem', { lineHeight: '1.875rem' }],
+                        'lg': ['1.375rem', { lineHeight: '2rem' }],
+                        'xl': ['1.5rem', { lineHeight: '2rem' }],
+                        '2xl': ['1.75rem', { lineHeight: '2.25rem' }],
+                        '3xl': ['2.125rem', { lineHeight: '2.5rem' }],
+                        '4xl': ['2.5rem', { lineHeight: '2.75rem' }],
+                        '5xl': ['3.25rem', { lineHeight: '1' }],
+                        '6xl': ['4rem', { lineHeight: '1' }],
+                        '7xl': ['4.875rem', { lineHeight: '1' }],
+                    },
+                    fontFamily: {
+                        'handwriting': ['Dancing Script', 'cursive'],
+                        'playball': ['Playball', 'cursive'],
+                        'serif': ['Cormorant Garamond', 'serif'],
+                        'sans': ['Cormorant Garamond', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream font-sans overflow-x-hidden min-h-screen">
+    <header class="sticky top-0 z-50 w-full">
+        <!-- Navigation -->
+        <nav class="w-full bg-[#faf0ea] text-[#3c5a09] p-4 font-playball text-xl">
+        <div class="w-full px-4 sm:px-6 md:px-8 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 sm:gap-3 min-w-0 flex-1 sm:flex-initial">
+                <img src="Logo Submark.png" alt="Le Goût des Volcans" class="h-12 sm:h-14 md:h-16 w-auto object-contain self-center translate-y-0.5 flex-shrink-0">
+                <span class="text-xl sm:text-3xl md:text-4xl text-[#a19e04] ml-1 sm:ml-2 md:ml-3 leading-tight max-w-[calc(100vw-7rem)] sm:max-w-none line-clamp-2">Le Goût des Volcans</span>
+            </a>
+            <div class="hidden md:flex space-x-10 text-xl md:text-2xl">
+                <a href="index.html" class="hover:text-[#f4c36f] transition">Accueil</a>
+                <a href="histoire.html" class="hover:text-[#f4c36f] transition">Notre Histoire</a>
+                <a href="cuisine.html" class="hover:text-[#f4c36f] transition">Notre Cuisine</a>
+                <a href="menu.html" class="text-[#a19e04] font-semibold hover:text-[#a19e04] transition" aria-current="page">Menu</a>
+                <a href="contact.html" class="hover:text-[#f4c36f] transition">Contact</a>
+            </div>
+            <button type="button" id="navToggle" class="md:hidden p-2 text-[#3c5a09] hover:text-[#a19e04] transition rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a19e04]" aria-label="Ouvrir le menu" aria-expanded="false">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <div id="navMobile" class="hidden md:hidden border-t border-[#a19e04]/20 bg-[#faf0ea] px-4 py-4">
+            <nav class="flex flex-col gap-3 text-xl">
+                <a href="index.html" class="py-2 hover:text-[#a19e04] transition">Accueil</a>
+                <a href="histoire.html" class="py-2 hover:text-[#a19e04] transition">Notre Histoire</a>
+                <a href="cuisine.html" class="py-2 hover:text-[#a19e04] transition">Notre Cuisine</a>
+                <a href="menu.html" class="py-2 text-[#a19e04] font-semibold" aria-current="page">Menu</a>
+                <a href="contact.html" class="py-2 hover:text-[#a19e04] transition">Contact</a>
+            </nav>
+        </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[50vh] sm:min-h-[55vh] h-[60vh]" aria-label="Bannière Menu">
+        <div class="absolute inset-0 hero-overlay z-10"></div>
+        <img src="./Images/Bannière menu.jpeg" 
+             alt="Notre menu du jour : formules, plats et desserts au Goût des Volcans, Clermont-Ferrand" 
+             class="w-full h-full object-cover object-center" loading="eager" fetchpriority="high" width="1920" height="1080">
+        <div class="absolute inset-0 flex flex-col items-center justify-center z-20 text-center px-4 sm:px-6">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-playball text-[#faf0ea] drop-shadow-sm mb-2 sm:mb-3">Notre Menu de la Semaine</h1>
+            <p class="text-base sm:text-xl md:text-2xl text-white max-w-xl mb-6 sm:mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] [text-shadow:0_1px_3px_rgba(0,0,0,0.9)]">Chaque semaine, une carte qui suit les saisons et les producteurs.</p>
+            <a href="contact.html#reserver" class="inline-block bg-[#faf0ea] text-[#a19e04] px-5 py-3 sm:px-6 rounded-lg hover:opacity-90 transition font-playball font-bold text-base sm:text-lg shadow-lg min-h-[44px] inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-[#faf0ea] focus:ring-offset-2 focus:ring-offset-[#a19e04]">Réserver une table</a>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-12 bg-[#faf0ea] border-b border-[#a19e04]/15">
+        <div class="container mx-auto px-4 max-w-5xl text-center">
+            <p class="text-xl text-[#3c5a09] leading-relaxed">
+                Nous changeons notre menu chaque semaine selon les produits de saison, le marché local et notre inspiration. Tout est fait maison, avec des ingrédients bio et une démarche zéro déchet. Les prix indiqués sont donnés à titre indicatif et peuvent varier selon les arrivages.
+            </p>
+        </div>
+    </section>
+
+    <!-- Liens rapides -->
+    <nav id="liens-rapides" class="py-3 sm:py-4 md:py-5 bg-[#3c5a09] border-b-4 border-[#3c5a09] shadow-lg sticky top-14 md:top-[5.5rem] z-40" aria-label="Sections du menu">
+        <div class="container mx-auto px-3 sm:px-4">
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 text-center">
+                <a href="#formules" class="lien-rapide inline-block px-4 py-2.5 sm:px-6 sm:py-3 rounded-xl text-[#faf0ea] hover:bg-[#faf0ea]/20 font-playball font-bold text-base sm:text-lg md:text-xl transition border-2 border-transparent hover:border-[#faf0ea]/50 min-h-[44px] flex items-center justify-center" data-section="formules">Formules</a>
+                <a href="#carte" class="lien-rapide inline-block px-4 py-2.5 sm:px-6 sm:py-3 rounded-xl text-[#faf0ea] hover:bg-[#faf0ea]/20 font-playball font-bold text-base sm:text-lg md:text-xl transition border-2 border-transparent hover:border-[#faf0ea]/50 min-h-[44px] flex items-center justify-center" data-section="carte">À la carte</a>
+                <a href="#menus-speciaux" class="lien-rapide inline-block px-4 py-2.5 sm:px-6 sm:py-3 rounded-xl text-[#faf0ea] hover:bg-[#faf0ea]/20 font-playball font-bold text-base sm:text-lg md:text-xl transition border-2 border-transparent hover:border-[#faf0ea]/50 min-h-[44px] flex items-center justify-center" data-section="menus-speciaux">Menus spéciaux</a>
+                <a href="#boissons" class="lien-rapide inline-block px-4 py-2.5 sm:px-6 sm:py-3 rounded-xl text-[#faf0ea] hover:bg-[#faf0ea]/20 font-playball font-bold text-base sm:text-lg md:text-xl transition border-2 border-transparent hover:border-[#faf0ea]/50 min-h-[44px] flex items-center justify-center" data-section="boissons">Boissons</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Formules -->
+    <section id="formules" class="py-12 sm:py-16 md:py-20 bg-[#a19e04] scroll-mt-20">
+        <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-playball text-[#faf0ea] text-center mb-3 sm:mb-4">Nos Formules</h2>
+            <p class="text-center text-[#faf0ea]/90 text-base sm:text-lg mb-8 sm:mb-12 max-w-xl mx-auto px-2">Choisissez la formule qui vous convient : déjeuner, complète, végétarienne, vegan ou menu enfant.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg hover:shadow-xl hover:border-[#a19e04]/40 border-2 border-[#faf0ea] transition">
+                    <div class="text-4xl mb-4">🥄</div>
+                    <h3 class="text-2xl font-playball text-[#3c5a09] mb-2">Formule Déjeuner</h3>
+                    <p class="text-lg text-[#3c5a09]/80 mb-4">Entrée + Plat ou Plat + Dessert</p>
+                    <p class="text-2xl font-serif font-bold text-[#a19e04]">20€</p>
+                </div>
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg hover:shadow-xl hover:border-[#a19e04]/40 border-2 border-[#faf0ea] transition">
+                    <div class="text-4xl mb-4">🍽️</div>
+                    <h3 class="text-2xl font-playball text-[#3c5a09] mb-2">Formule Complète</h3>
+                    <p class="text-lg text-[#3c5a09]/80 mb-4">Entrée + Plat + Dessert</p>
+                    <p class="text-2xl font-serif font-bold text-[#a19e04]">25€</p>
+                </div>
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg hover:shadow-xl hover:border-[#a19e04]/40 border-2 border-[#faf0ea] transition">
+                    <div class="text-4xl mb-4">🧒</div>
+                    <h3 class="text-2xl font-playball text-[#3c5a09] mb-2">Menu Enfant</h3>
+                    <p class="text-lg text-[#3c5a09]/80 mb-4">Plat + Dessert + Boisson</p>
+                    <p class="text-2xl font-serif font-bold text-[#a19e04]">15€</p>
+                </div>
+            </div>
+            <!-- Bloc centré : Formule Vegan et Formule Végétale -->
+            <div class="flex justify-center mt-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl w-full">
+                    <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg hover:shadow-xl hover:border-[#a19e04]/40 border-2 border-[#faf0ea] transition">
+                        <div class="text-4xl mb-4">🌱</div>
+                        <h3 class="text-2xl font-playball text-[#3c5a09] mb-2">Formule Vegan</h3>
+                        <p class="text-lg text-[#3c5a09]/80 mb-4">100% végétalien</p>
+                        <p class="text-2xl font-serif font-bold text-[#a19e04]">25€</p>
+                    </div>
+                    <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg hover:shadow-xl hover:border-[#a19e04]/40 border-2 border-[#faf0ea] transition">
+                        <div class="text-4xl mb-4">🌿</div>
+                        <h3 class="text-2xl font-playball text-[#3c5a09] mb-2">Formule Végétarienne</h3>
+                        <p class="text-lg text-[#3c5a09]/80 mb-4">100% végétarien</p>
+                        <p class="text-2xl font-serif font-bold text-[#a19e04]">25€</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Citation -->
+    <section class="py-12 bg-[#faf0ea] border-y border-[#a19e04]/20 relative">
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#a19e04]/40 to-transparent"></div>
+        <div class="container mx-auto px-6 max-w-5xl text-center">
+            <p class="text-2xl md:text-3xl text-[#3c5a09] italic leading-relaxed">« Un menu qui change, des produits qui restent : ceux du terroir auvergnat. »</p>
+            <p class="mt-4 text-[#a19e04] font-playball text-xl">— L'équipe du Goût des Volcans</p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#a19e04]/30 to-transparent"></div>
+    </section>
+
+    <!-- Section carrousel citation -->
+    <section class="py-8 sm:py-12 bg-[#a19e04]" aria-label="Galerie photos">
+        <div class="container mx-auto px-4 sm:px-6 max-w-7xl w-full">
+            <div class="relative max-w-full mx-auto px-8 sm:px-10 md:px-14">
+                <div id="carouselCitation" class="relative overflow-hidden rounded-xl section-ombre">
+                    <div id="trackCitation" class="flex gap-2 transition-transform duration-500 ease-out">
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group min-w-0"><img src="./Images/menu/Divers_cocktails.webp" alt="Cocktails et boissons du restaurant" title="Cocktails et boissons maison, produits locaux et de saison." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Salade_aux_agrumes.webp" alt="Salade aux agrumes, entrée fraîcheur" title="Salade aux agrumes du jour, légumes et fruits de saison." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Boeuf_bourguignon_revisite.webp" alt="Bœuf bourguignon revisité, plat du terroir" title="Bœuf bourguignon revisité par notre chef, viande locale et produits de saison." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Brownies_et_glace_vanille.webp" alt="Brownies et glace vanille, dessert maison" title="Brownies au chocolat et glace vanille, dessert fait maison." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Bowl_fraicheur.webp" alt="Bowl fraîcheur, plat végétal ou vegan" title="Bowl fraîcheur aux légumes de saison, formule végétale ou vegan." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Cocktail_framboise.webp" alt="Cocktail framboise, boisson maison" title="Cocktail framboise sans alcool ou en version apéritif, fait maison." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Poulet_et_legumes_grillés.webp" alt="Poulet et légumes grillés, plat du jour" title="Poulet fermier et légumes grillés de saison, plat signature." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Pancakes.webp" alt="Pancakes maison, brunch ou dessert" title="Pancakes maison, sucrés ou salés selon les envies du jour." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Poulet_a_la_tomate.webp" alt="Poulet à la tomate, plat du terroir" title="Poulet à la tomate et herbes, viande locale et produits frais." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Aligot.webp" alt="Aligot, spécialité auvergnate à la tomme" title="Aligot maison, purée et tomme d'Auvergne, emblème du terroir." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Gaspacho_avocat_piment.webp" alt="Gaspacho avocat piment, entrée fraîcheur" title="Gaspacho avocat et piment, entrée froide de saison." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                    </div>
+                </div>
+                <button type="button" id="prevCitation" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#faf0ea] text-[#a19e04] flex items-center justify-center hover:bg-white transition shadow-xl border-2 border-[#a19e04]/40 min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0" aria-label="Photo précédente">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <button type="button" id="nextCitation" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#faf0ea] text-[#a19e04] flex items-center justify-center hover:bg-white transition shadow-xl border-2 border-[#a19e04]/40 min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0" aria-label="Photo suivante">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+                <div id="dotsCitation" class="flex justify-center gap-2 py-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À la Carte -->
+    <section id="carte" class="py-12 sm:py-16 md:py-20 bg-nature-pattern scroll-mt-20">
+        <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-playball text-[#a19e04] text-center mb-8 sm:mb-12">À la Carte</h2>
+            <p class="text-center text-[#3c5a09] text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl mx-auto px-2">Choisissez votre entrée, plat et dessert au fil des propositions du jour. Les plats sont élaborés le matin même selon le marché.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg border border-[#a19e04]/15 hover:shadow-xl transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-2">🥗</span>
+                            <h3 class="text-2xl font-playball text-[#3c5a09]">Entrées</h3>
+                        </div>
+                        <span class="text-2xl font-serif font-bold text-[#a19e04]">6,50€</span>
+                    </div>
+                    <ul class="space-y-3 text-lg text-[#3c5a09]">
+                        <li>Soupe d'épluchures aux herbes sauvages</li>
+                        <li>Salade de lentilles blondes aux noix</li>
+                        <li>Tarte fine aux oignons confits & crème de tomme</li>
+                        <li>Velouté de potimarron aux châtaignes</li>
+                    </ul>
+                </div>
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg border border-[#a19e04]/15 hover:shadow-xl transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-2">🍖</span>
+                            <h3 class="text-2xl font-playball text-[#3c5a09]">Plats</h3>
+                        </div>
+                        <span class="text-2xl font-serif font-bold text-[#a19e04]">15,50€</span>
+                    </div>
+                    <ul class="space-y-3 text-lg text-[#3c5a09]">
+                        <li>Croquettes de fromage à la tomme fondue</li>
+                        <li>Potée auvergnate revisitée</li>
+                        <li>Œuf mollet, purée de légumes oubliés & chips de panais</li>
+                        <li>Sauté de bœuf fermier, gratin de courge & herbes</li>
+                    </ul>
+                </div>
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg border border-[#a19e04]/15 hover:shadow-xl transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-2">🧁</span>
+                            <h3 class="text-2xl font-playball text-[#3c5a09]">Desserts</h3>
+                        </div>
+                        <span class="text-2xl font-serif font-bold text-[#a19e04]">6,50€</span>
+                    </div>
+                    <ul class="space-y-6 text-lg text-[#3c5a09]">
+                        <li>Pain perdu salé au bleu d'Auvergne</li>
+                        <li>Compotée de pommes locales</li>
+                        <li>Gâteau moelleux à la peau de banane</li>
+                        <li>Crème de marrons & spéculos maison</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menus Spéciaux -->
+    <section id="menus-speciaux" class="py-12 sm:py-16 md:py-20 bg-[#a19e04] text-[#faf0ea] scroll-mt-20">
+        <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-playball text-center mb-8 sm:mb-12">Menus Spéciaux</h2>
+            <p class="text-center text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto px-2">Formules dédiées végétariennes, végétaliennes et enfants : trois services pour vous régaler.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg text-[#3c5a09]">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-2">🌿</span>
+                        <h3 class="text-2xl font-playball">Menu Végétal</h3>
+                    </div>
+                    <p class="text-2xl font-serif font-bold text-[#a19e04] mb-4">16€</p>
+                    <ul class="space-y-3 text-lg">
+                        <li>Velouté de fanes de carottes & crème d'avoine</li>
+                        <li>Dahl de lentilles vertes, légumes de saison</li>
+                        <li>Poire pochée au miel de montagne</li>
+                    </ul>
+                </div>
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg text-[#3c5a09]">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-2">🌱</span>
+                        <h3 class="text-2xl font-playball">Menu Vegan</h3>
+                    </div>
+                    <p class="text-2xl font-serif font-bold text-[#a19e04] mb-4">16€</p>
+                    <ul class="space-y-3 text-lg">
+                        <li>Carpaccio de betterave & graines toastées</li>
+                        <li>Risotto de petit épeautre aux légumes rôtis</li>
+                        <li>Mousse au chocolat noir (aquafaba)</li>
+                    </ul>
+                </div>
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg text-[#3c5a09]">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-2">🧒</span>
+                        <h3 class="text-2xl font-playball">Menu Enfant</h3>
+                    </div>
+                    <p class="text-2xl font-serif font-bold text-[#a19e04] mb-4">10€</p>
+                    <ul class="space-y-3 text-lg">
+                        <li>Mini hachis parmentier <span class="text-[#3c5a09]/80">ou</span> croquette fromage & gratin de légumes</li>
+                        <li>Moelleux au chocolat <span class="text-[#3c5a09]/80">ou</span> compote pomme-banane maison</li>
+                        <li>Jus de pomme artisanal <span class="text-[#3c5a09]/80">ou</span> eau</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Boissons -->
+    <section id="boissons" class="py-12 sm:py-16 md:py-20 bg-nature-pattern scroll-mt-20">
+        <div class="container mx-auto px-4 sm:px-6 max-w-5xl">
+            <h2 class="text-3xl sm:text-4xl font-playball text-[#a19e04] text-center mb-6 sm:mb-8">Boissons</h2>
+            <p class="text-center text-[#3c5a09] text-lg mb-10">Vins du Massif central, bières locales et boissons sans alcool. Demandez la carte des vins en salle.</p>
+            <div class="grid sm:grid-cols-2 gap-6 text-[#3c5a09]">
+                <div class="bg-[#faf0ea] p-6 rounded-xl border border-[#a19e04]/20 hover:shadow-lg hover:border-[#a19e04]/40 transition">
+                    <h3 class="text-2xl font-playball text-[#a19e04] mb-3">Vins & bières</h3>
+                    <p class="text-lg">Côtes d'Auvergne, Saint-Pourçain, Côtes du Forez, bières artisanales de la région. Verre ou bouteille.</p>
+                </div>
+                <div class="bg-[#faf0ea] p-6 rounded-xl border border-[#a19e04]/20 hover:shadow-lg hover:border-[#a19e04]/40 transition">
+                    <h3 class="text-2xl font-playball text-[#a19e04] mb-3">Sans alcool</h3>
+                    <p class="text-lg">Jus de fruits locaux, infusions, eau plate ou pétillante, sirops maison.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section carrousel boissons -->
+    <section class="py-12 bg-[#a19e04]" aria-label="Galerie boissons">
+        <div class="container mx-auto px-6 max-w-7xl w-full">
+            <div class="relative max-w-full mx-auto px-8 sm:px-10 md:px-14">
+                <div id="carouselBoissons" class="relative overflow-hidden rounded-xl section-ombre">
+                    <div id="trackBoissons" class="flex gap-2 transition-transform duration-500 ease-out">
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Divers_cocktails_2.webp" alt="Cocktails et créations maison" title="Cocktails et boissons du bar, élaborés avec les produits du terroir." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Salade_fraicheur.webp" alt="Salade fraîcheur, entrée aux légumes de saison" title="Salade fraîcheur du jour, légumes et herbes selon le marché." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Ragout.webp" alt="Ragoût maison, plat mijoté du terroir" title="Ragoût mijoté, viande et légumes de saison, recette du jour." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Penne_pesto_maison.webp" alt="Pennes au pesto maison, plat végétal" title="Pennes au pesto maison, basilic et parmesan, plat du jour." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Steak_grillé.webp" alt="Steak grillé et accompagnements, plat du jour" title="Steak grillé, viande locale et accompagnements de saison." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Salde_de_quinoa.webp" alt="Salade de quinoa, entrée ou plat végétal" title="Salade de quinoa aux légumes de saison, option végétarienne ou vegan." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Fondant_choco_et_glace_vanille.webp" alt="Fondant chocolat et glace vanille, dessert maison" title="Fondant au chocolat et glace vanille, dessert signature." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Bowl-du-jardin.webp" alt="Bowl du jardin, plat végétal de saison" title="Bowl du jardin aux légumes et herbes fraîches, formule végétale." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Mijote_de_boeuf.webp" alt="Mijoté de bœuf, plat du terroir" title="Mijoté de bœuf maison, viande locale et légumes de saison." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Mijote_de_porc.webp" alt="Mijoté de porc, plat traditionnel" title="Mijoté de porc, viande fermière et accompagnements du jour." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                        <div class="carousel-slide flex-[0_0_100%] sm:flex-[0_0_calc((100%-0.5rem)/2)] md:flex-[0_0_calc((100%-1rem)/3)] aspect-[4/3] min-w-0 rounded-lg overflow-hidden cursor-pointer group"><img src="./Images/menu/Mouuse_3_choco.webp" alt="Mousse aux trois chocolats, dessert maison" title="Mousse aux trois chocolats, dessert signature de la maison." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                    </div>
+                </div>
+                <button type="button" id="prevBoissons" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#faf0ea] text-[#a19e04] flex items-center justify-center hover:bg-white transition shadow-xl border-2 border-[#a19e04]/40 min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0" aria-label="Photo précédente">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <button type="button" id="nextBoissons" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#faf0ea] text-[#a19e04] flex items-center justify-center hover:bg-white transition shadow-xl border-2 border-[#a19e04]/40 min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0" aria-label="Photo suivante">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+                <div id="dotsBoissons" class="flex justify-center gap-2 py-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produits & saisons -->
+    <section id="produits" class="py-12 sm:py-16 md:py-20 bg-[#faf0ea] border-y border-[#a19e04]/15 scroll-mt-20">
+        <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-10 items-center">
+                <img src="./Images/menu/Truffade.webp" alt="Des produits qui font le menu — plat du terroir" class="rounded-xl section-ombre w-full aspect-[4/3] object-cover max-w-full" loading="lazy">
+                <div class="min-w-0">
+                    <h2 class="text-3xl sm:text-4xl font-playball text-[#a19e04] mb-4 sm:mb-6">Des produits qui font le menu</h2>
+                    <p class="text-lg text-[#3c5a09] leading-relaxed">Chaque plat est conçu à partir des arrivages du jour : légumes de nos maraîchers, fromages d'Auvergne, viandes et charcuteries locales. Allergies ou régime particulier ? Signalez-le nous à la réservation ou en début de repas, nous nous adaptons.</p>
+                    <a href="cuisine.html" class="inline-block mt-6 text-[#a19e04] font-playball text-xl hover:text-[#3c5a09] transition underline decoration-[#a19e04]/50 underline-offset-4">Découvrir notre cuisine →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="py-12 sm:py-16 md:py-20 bg-[#a19e04] relative overflow-hidden" aria-label="Passer à l'action">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#3c5a09]/25 to-transparent pointer-events-none" aria-hidden="true"></div>
+        <div class="container mx-auto px-4 sm:px-6 max-w-4xl relative text-center">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-playball text-[#faf0ea] mb-2 sm:mb-3">Envie de réserver ?</h2>
+            <p class="text-[#faf0ea]/95 text-base sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-xl mx-auto px-2">Réservez votre table ou découvrez notre cuisine et nos producteurs en détail.</p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+                <a href="cuisine.html" class="inline-flex items-center justify-center gap-2 bg-[#faf0ea] text-[#3c5a09] px-8 py-4 rounded-xl font-playball font-bold text-xl shadow-lg hover:bg-[#f4c36f] hover:shadow-xl transition focus:outline-none focus:ring-2 focus:ring-[#faf0ea] focus:ring-offset-2 focus:ring-offset-[#a19e04]">
+                    Découvrir notre cuisine
+                </a>
+                <a href="contact.html" class="inline-flex items-center justify-center gap-2 border-2 border-[#faf0ea] text-[#faf0ea] px-8 py-4 rounded-xl font-playball font-bold text-xl hover:bg-[#faf0ea] hover:text-[#a19e04] transition focus:outline-none focus:ring-2 focus:ring-[#faf0ea] focus:ring-offset-2 focus:ring-offset-[#a19e04]">
+                    Réserver une table
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#faf0ea] text-[#3c5a09] py-12 sm:py-16 md:py-20 text-base sm:text-lg">
+        <div class="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-16 lg:gap-16 xl:gap-24 w-full">
+                <div class="flex flex-col items-center text-center">
+                    <a href="index.html" class="inline-block mb-6 hover:opacity-90 transition">
+                        <img src="Logo principal.png" alt="Le Goût des Volcans" class="h-20 w-auto object-contain">
+                    </a>
+                    <address class="text-[#3c5a09] not-italic leading-relaxed">
+                        40 place Jaude<br>
+                        63000 Clermont-Ferrand
+                    </address>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <p class="font-semibold text-[#3c5a09] mb-2">Téléphone :</p>
+                    <p class="mb-6 text-[#3c5a09]">04 73 00 00 00</p>
+                    <p class="font-semibold text-[#3c5a09] mb-2">Mail :</p>
+                    <p class="text-[#3c5a09]">bonjour@legoutdesvolcans.fr</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <nav class="flex flex-col space-y-4 items-center">
+                        <a href="index.html" class="text-[#3c5a09] hover:text-[#f4c36f] transition">Accueil</a>
+                        <a href="histoire.html" class="text-[#3c5a09] hover:text-[#f4c36f] transition">Notre Histoire</a>
+                        <a href="cuisine.html" class="text-[#3c5a09] hover:text-[#f4c36f] transition">Notre Cuisine</a>
+                        <a href="menu.html" class="text-[#a19e04] font-semibold hover:text-[#a19e04] transition" aria-current="page">Menu</a>
+                        <a href="contact.html" class="text-[#3c5a09] hover:text-[#f4c36f] transition">Contact</a>
+                    </nav>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <p class="text-[#3c5a09] mb-6 leading-snug">Suivez-nous sur les<br>réseaux sociaux</p>
+                    <div class="flex gap-6 justify-center">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-[#3c5a09] hover:text-[#f4c36f] transition" aria-label="Instagram">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-[#3c5a09] hover:text-[#f4c36f] transition" aria-label="Facebook">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="text-[#3c5a09] hover:text-[#f4c36f] transition" aria-label="X (Twitter)">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" type="button" class="fixed bottom-8 right-8 bg-[#a19e04] text-[#faf0ea] p-3 rounded-full shadow-lg hover:opacity-90 transition opacity-0 invisible focus:outline-none focus:ring-2 focus:ring-[#a19e04] focus:ring-offset-2 focus:ring-offset-[#faf0ea]" aria-label="Retour en haut de la page">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <!-- Modal plein écran pour les photos des carrousels -->
+    <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/95 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Photo en grand">
+        <button type="button" id="lightboxClose" class="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/10 text-white hover:bg-white/20 flex items-center justify-center transition z-10" aria-label="Fermer">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <button type="button" id="lightboxPrev" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 text-white hover:bg-white/20 flex items-center justify-center transition z-10" aria-label="Photo précédente">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button type="button" id="lightboxNext" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 text-white hover:bg-white/20 flex items-center justify-center transition z-10" aria-label="Photo suivante">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+        <img id="lightboxImg" src="" alt="" class="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-lg">
+    </div>
+
+    <script>
+        // Menu mobile
+        (function() {
+            var navToggle = document.getElementById('navToggle');
+            var navMobile = document.getElementById('navMobile');
+            if (navToggle && navMobile) {
+                navToggle.addEventListener('click', function() {
+                    var open = !navMobile.classList.contains('hidden');
+                    navMobile.classList.toggle('hidden', open);
+                    navToggle.setAttribute('aria-expanded', !open);
+                    navToggle.setAttribute('aria-label', open ? 'Ouvrir le menu' : 'Fermer le menu');
+                });
+            }
+        })();
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Carrousels photo : toujours N photos visibles (3 sur desktop), boucle infinie
+        const GAP = 8;
+        const DOT_ACTIVE = 'bg-[#faf0ea]';
+        const DOT_INACTIVE = 'bg-[#faf0ea]/40';
+        function initCarousel(trackId, prevId, nextId, dotsId, total) {
+            const track = document.getElementById(trackId);
+            const prevBtn = document.getElementById(prevId);
+            const nextBtn = document.getElementById(nextId);
+            const dotsEl = document.getElementById(dotsId);
+            if (!track || !dotsEl) return;
+            const slides = track.querySelectorAll('.carousel-slide');
+            let index = 0;
+
+            function getVisibleCount() {
+                var container = track.parentElement;
+                if (!container || !slides[0]) return 1;
+                var cw = container.getBoundingClientRect().width;
+                var sw = slides[0].getBoundingClientRect().width;
+                if (sw <= 0) return 1;
+                var n = Math.floor((cw + GAP) / (sw + GAP));
+                return Math.min(total, Math.max(1, n));
+            }
+
+            function getMaxIndex() {
+                return Math.max(0, total - getVisibleCount());
+            }
+
+            function getStep() {
+                if (!slides[0]) return 0;
+                const w = slides[0].getBoundingClientRect().width;
+                return w + GAP;
+            }
+
+            function update() {
+                var maxIdx = getMaxIndex();
+                index = Math.min(index, maxIdx);
+                const step = getStep();
+                track.style.transform = 'translateX(-' + (index * step) + 'px)';
+                var dots = dotsEl.querySelectorAll('button');
+                dots.forEach(function(d, i) {
+                    d.style.display = i <= maxIdx ? '' : 'none';
+                    d.classList.toggle(DOT_ACTIVE, i === index);
+                    d.classList.toggle(DOT_INACTIVE, i !== index);
+                });
+            }
+
+            for (var i = 0; i < total; i++) {
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'w-2.5 h-2.5 rounded-full transition ' + (i === 0 ? DOT_ACTIVE : DOT_INACTIVE);
+                btn.setAttribute('aria-label', 'Position ' + (i + 1));
+                btn.addEventListener('click', function(ii) { return function() { index = ii; update(); }; }(i));
+                dotsEl.appendChild(btn);
+            }
+
+            if (prevBtn) prevBtn.addEventListener('click', function() {
+                var maxIdx = getMaxIndex();
+                index = (index - 1 + (maxIdx + 1)) % (maxIdx + 1);
+                update();
+            });
+            if (nextBtn) nextBtn.addEventListener('click', function() {
+                var maxIdx = getMaxIndex();
+                index = (index + 1) % (maxIdx + 1);
+                update();
+            });
+            window.addEventListener('resize', update);
+            update();
+
+            setInterval(function() {
+                var maxIdx = getMaxIndex();
+                index = (index + 1) % (maxIdx + 1);
+                update();
+            }, 3000);
+        }
+
+        initCarousel('trackCitation', 'prevCitation', 'nextCitation', 'dotsCitation', 11);
+        initCarousel('trackBoissons', 'prevBoissons', 'nextBoissons', 'dotsBoissons', 11);
+
+        // Lightbox : clic sur une photo du carrousel = plein écran
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        let lightboxSrcs = [];
+        let lightboxIndex = 0;
+
+        function openLightbox(srcs, i) {
+            lightboxSrcs = srcs;
+            lightboxIndex = i;
+            lightboxImg.src = lightboxSrcs[lightboxIndex];
+            lightboxImg.alt = 'Photo ' + (lightboxIndex + 1);
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function showLightboxImage(i) {
+            lightboxIndex = (i + lightboxSrcs.length) % lightboxSrcs.length;
+            lightboxImg.src = lightboxSrcs[lightboxIndex];
+            lightboxImg.alt = 'Photo ' + (lightboxIndex + 1);
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', () => { showLightboxImage(lightboxIndex - 1); });
+        lightboxNext.addEventListener('click', () => { showLightboxImage(lightboxIndex + 1); });
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showLightboxImage(lightboxIndex - 1);
+            if (e.key === 'ArrowRight') showLightboxImage(lightboxIndex + 1);
+        });
+
+        document.querySelectorAll('#carouselCitation .carousel-slide, #carouselBoissons .carousel-slide').forEach((slide, _) => {
+            const track = slide.closest('[id^="track"]');
+            if (!track) return;
+            const imgs = track.querySelectorAll('.carousel-slide img');
+            const srcs = Array.from(imgs).map(img => img.src);
+            slide.addEventListener('click', (e) => {
+                if (e.target.closest('button')) return;
+                const idx = Array.from(track.querySelectorAll('.carousel-slide')).indexOf(slide);
+                openLightbox(srcs, idx);
+            });
+        });
+
+        // Liens rapides : indiquer la section en cours (lien actif au scroll)
+        (function() {
+            var nav = document.getElementById('liens-rapides');
+            if (!nav) return;
+            var links = nav.querySelectorAll('.lien-rapide');
+            var sectionIds = ['formules', 'carte', 'menus-speciaux', 'boissons'];
+            var offsetTop = 180;
+
+            function setActiveLink() {
+                var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+                var current = null;
+                for (var i = sectionIds.length - 1; i >= 0; i--) {
+                    var el = document.getElementById(sectionIds[i]);
+                    if (el && el.getBoundingClientRect().top <= offsetTop) {
+                        current = sectionIds[i];
+                        break;
+                    }
+                }
+                if (!current && sectionIds.length) current = sectionIds[0];
+                links.forEach(function(a) {
+                    var isActive = a.getAttribute('data-section') === current;
+                    a.classList.toggle('active', isActive);
+                    a.setAttribute('aria-current', isActive ? 'true' : 'false');
+                });
+            }
+
+            window.addEventListener('scroll', setActiveLink);
+            window.addEventListener('resize', setActiveLink);
+            setActiveLink();
+        })();
+    </script>
+    <style>
+        body, p, span, a, li, label, input, textarea, button, div, ul, ol, blockquote, strong, em {
+            font-family: 'Cormorant Garamond', serif !important;
+        }
+        /* Lien rapide actif = section en cours de lecture (vert clair) */
+        #liens-rapides .lien-rapide.active {
+            background-color: #a19e04 !important;
+            color: #faf0ea !important;
+            border-color: #a19e04 !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        #liens-rapides .lien-rapide.active:hover {
+            background-color: #b3b01a !important;
+            color: #faf0ea !important;
+        }
+    </style>
+</body>
+</html> 

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Goût des Volcans - Restaurant Bio à Clermont-Ferrand</title>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="./Images/Resto.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Playball';
+            src: url('./Police/Playball/Playball-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Indie Flower';
+            src: url('./Police/Indie%20Flower/IndieFlower-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cormorant Garamond';
+            src: url('./Coromant%20Garamond/static/CormorantGaramond-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body, p, span, a, li, label, input, textarea, button, div {
+            font-family: 'Cormorant Garamond', serif !important;
+        }
+        h1, h2 {
+            font-family: 'Playball', cursive !important;
+        }
+        h3, h4, h5, h6 {
+            font-family: 'Indie Flower', cursive !important;
+        }
+        header nav,
+        header nav span,
+        header nav a {
+            font-family: 'Playball', cursive !important;
+        }
+        footer .font-playball {
+            font-family: 'Playball', cursive !important;
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(161, 158, 4, 0.4) 0%, rgba(0,0,0,0.35) 45%, rgba(161, 158, 4, 0.12) 100%);
+        }
+        .bg-nature-pattern {
+            background-color: #faf0ea;
+            background-image: radial-gradient(circle at 20% 80%, rgba(161, 158, 4, 0.08) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 20%, rgba(161, 158, 4, 0.06) 0%, transparent 45%);
+        }
+        .section-ombre {
+            box-shadow: 0 4px 24px rgba(163, 158, 4, 0.08);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mousse': '#3C5A09',
+                        'terracotta': '#f4c36f',
+                        'cream': '#FAF0EA',
+                    },
+                    fontSize: {
+                        'xs': ['1rem', { lineHeight: '1.5rem' }],
+                        'sm': ['1.0625rem', { lineHeight: '1.625rem' }],
+                        'base': ['1.25rem', { lineHeight: '1.875rem' }],
+                        'lg': ['1.375rem', { lineHeight: '2rem' }],
+                        'xl': ['1.5rem', { lineHeight: '2rem' }],
+                        '2xl': ['1.75rem', { lineHeight: '2.25rem' }],
+                        '3xl': ['2.125rem', { lineHeight: '2.5rem' }],
+                        '4xl': ['2.5rem', { lineHeight: '2.75rem' }],
+                        '5xl': ['3.25rem', { lineHeight: '1' }],
+                        '6xl': ['4rem', { lineHeight: '1' }],
+                        '7xl': ['4.875rem', { lineHeight: '1' }],
+                    },
+                    fontFamily: {
+                        'handwriting': ['Dancing Script', 'cursive'],
+                        'playball': ['Playball', 'cursive'],
+                        'sans': ['Cormorant Garamond', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream font-sans overflow-x-hidden min-h-screen">
+    <header class="sticky top-0 z-50 w-full">
+        <!-- Navigation -->
+        <nav class="w-full bg-[#faf0ea] text-[#3c5a09] p-4 font-playball text-xl">
+        <div class="w-full px-4 sm:px-6 md:px-8 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 sm:gap-3 min-w-0 flex-1 sm:flex-initial">
+                <img src="Logo Submark.png" alt="Le Goût des Volcans" class="h-12 sm:h-14 md:h-16 w-auto object-contain self-center translate-y-0.5 flex-shrink-0" width="64" height="64" fetchpriority="high">
+                <span class="text-xl sm:text-3xl md:text-4xl text-[#a19e04] ml-1 sm:ml-2 md:ml-3 leading-tight max-w-[calc(100vw-7rem)] sm:max-w-none line-clamp-2">Le Goût des Volcans</span>
+            </a>
+            <div class="hidden md:flex space-x-10 text-xl md:text-2xl">
+                <a href="index.html" class="text-[#a19e04] font-semibold hover:text-[#a19e04] transition" aria-current="page">Accueil</a>
+                <a href="histoire.html" class="hover:text-[#f4c36f] transition">Notre Histoire</a>
+                <a href="cuisine.html" class="hover:text-[#f4c36f] transition">Notre Cuisine</a>
+                <a href="menu.html" class="hover:text-[#f4c36f] transition">Menu</a>
+                <a href="contact.html" class="hover:text-[#f4c36f] transition">Contact</a>
+            </div>
+            <button type="button" id="navToggle" class="md:hidden p-2 text-[#3c5a09] hover:text-[#a19e04] transition rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a19e04]" aria-label="Ouvrir le menu" aria-expanded="false">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <div id="navMobile" class="hidden md:hidden border-t border-[#a19e04]/20 bg-[#faf0ea] px-4 py-4">
+            <nav class="flex flex-col gap-3 text-xl">
+                <a href="index.html" class="py-2 text-[#a19e04] font-semibold" aria-current="page">Accueil</a>
+                <a href="histoire.html" class="py-2 hover:text-[#a19e04] transition">Notre Histoire</a>
+                <a href="cuisine.html" class="py-2 hover:text-[#a19e04] transition">Notre Cuisine</a>
+                <a href="menu.html" class="py-2 hover:text-[#a19e04] transition">Menu</a>
+                <a href="contact.html" class="py-2 hover:text-[#a19e04] transition">Contact</a>
+            </nav>
+        </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="relative min-h-[100dvh] h-screen">
+        <div class="absolute inset-0 hero-overlay z-10"></div>
+        <img src="./Images/Resto.jpeg" 
+             alt="Salle et ambiance du restaurant Le Goût des Volcans, place Jaude à Clermont-Ferrand" 
+             class="w-full h-full object-cover" fetchpriority="high" width="1920" height="1080">
+        <div class="absolute inset-0 flex flex-col items-center justify-center z-20 text-center px-4 sm:px-6">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-playball text-cream mb-3 sm:mb-4 drop-shadow-sm">Le Goût des Volcans</h1>
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white italic mb-8 sm:mb-10 max-w-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] [text-shadow:0_1px_3px_rgba(0,0,0,0.9)]">Du local dans l'assiette, du cœur en cuisine</p>
+            <a href="contact.html#reserver" class="inline-block bg-[#faf0ea] text-[#a19e04] px-6 py-3 sm:px-8 rounded-lg hover:opacity-90 transition font-playball font-bold text-lg sm:text-xl shadow-lg min-h-[44px] inline-flex items-center justify-center">
+                Réserver une table
+            </a>
+        </div>
+    </section>
+
+    <!-- Notre Histoire -->
+    <section id="histoire" class="py-12 sm:py-16 md:py-20 bg-nature-pattern">
+        <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-playball text-[#a19e04] text-center mb-10 sm:mb-16">Notre Histoire</h2>
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+                <div>
+                    <p class="text-lg text-[#3c5a09] mb-6 text-justify">Nés au pied des volcans, Julie, Marc et Clara ont décidé de faire de leur passion pour la nature et la cuisine un art de vivre.</p>
+                    <p class="text-lg text-[#3c5a09] mb-6 text-justify">Ensemble, ils ont créé Le Goût des Volcans : un petit restaurant où l'on sert des plats bio, locaux, et sincèrement bons. Ici, pas de chichi – juste du goût, du cœur, et une cuisine respectueuse des saisons et de la planète.</p>
+                    <p class="text-lg text-[#3c5a09] mb-8 text-justify">Notre carte change au fil des saisons et des arrivages. Chaque semaine, nous cuisinons les légumes, fromages et viandes de nos producteurs pour vous proposer des formules du marché à prix doux.</p>
+                    <a href="histoire.html" class="inline-block text-[#a19e04] font-playball text-xl hover:text-[#3c5a09] transition underline decoration-[#a19e04]/50 underline-offset-4">En savoir plus →</a>
+                </div>
+                <img src="./Images/index/Puy_de_Dome.webp" 
+                     alt="Vue sur le Puy de Dôme et les volcans d'Auvergne, terroir du Goût des Volcans" 
+                     class="rounded-xl section-ombre object-cover w-full aspect-[4/3] max-w-full" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre Cuisine -->
+    <section id="cuisine" class="py-12 sm:py-16 md:py-20 bg-[#a19e04] text-cream">
+        <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-playball text-center mb-8 sm:mb-12">Notre Cuisine</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg hover:shadow-xl hover:border-[#a19e04]/40 border-2 border-[#a19e04]/20 transition">
+                    <h3 class="text-2xl font-playball text-[#3c5a09] mb-4">Produits Locaux</h3>
+                    <p class="text-lg text-[#3c5a09]">Légumes bio, fromages d'Auvergne, lentilles blondes, charcuterie locale... Tous nos produits sont sélectionnés avec soin auprès des producteurs de la région.</p>
+                </div>
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg hover:shadow-xl hover:border-[#a19e04]/40 border-2 border-[#a19e04]/20 transition">
+                    <h3 class="text-2xl font-playball text-[#3c5a09] mb-4">Recettes Originales</h3>
+                    <p class="text-lg text-[#3c5a09]">Soupe d'épluchures aux herbes sauvages, Croquettes de fromage à la tomme fondue, Pain perdu salé au bleu d'Auvergne... Des créations uniques qui subliment les produits locaux.</p>
+                </div>
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg hover:shadow-xl hover:border-[#a19e04]/40 border-2 border-[#a19e04]/20 transition">
+                    <h3 class="text-2xl font-playball text-[#3c5a09] mb-4">Zéro Déchet</h3>
+                    <p class="text-lg text-[#3c5a09]">Compost, recyclage, bocaux, cuisine intégrale des aliments... Notre démarche zéro déchet est au cœur de notre engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- En images -->
+    <section class="py-12 sm:py-16 md:py-20 bg-nature-pattern">
+        <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-playball text-[#a19e04] text-center mb-2 sm:mb-4">Quelques instants</h2>
+            <p class="text-center text-[#3c5a09] text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto px-2">Terroir auvergnat, produits locaux et paysages des volcans… Découvrez l'univers du Goût des Volcans.</p>
+            <div id="galerie-instant" class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 cursor-pointer">
+                <div class="rounded-xl overflow-hidden section-ombre aspect-[4/3]">
+                    <img src="./Images/index/Cocktails.webp" alt="Cocktails et boissons maison du Goût des Volcans" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-xl overflow-hidden section-ombre aspect-[4/3]">
+                    <img src="./Images/index/Salade_du_chef.webp" alt="Salade du chef, création du jour aux produits locaux" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-xl overflow-hidden section-ombre aspect-[4/3]">
+                    <img src="./Images/index/Tiramisu.webp" alt="Tiramisu maison, dessert signature" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-xl overflow-hidden section-ombre aspect-[4/3]">
+                    <img src="./Images/index/Salade_des_vignes.webp" alt="Salade des vignes, légumes de saison et terroir" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-xl overflow-hidden section-ombre aspect-[4/3]">
+                    <img src="./Images/index/Plat_signature.webp" alt="Plat signature du chef, cuisine locale et de saison" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-xl overflow-hidden section-ombre aspect-[4/3]">
+                    <img src="./Images/index/Mocktail_framboise.webp" alt="Mocktail framboise sans alcool, boisson maison" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-xl overflow-hidden section-ombre aspect-[4/3]">
+                    <img src="./Images/index/Divers_vin.webp" alt="Vins du Massif central et carte des vins au restaurant" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-xl overflow-hidden section-ombre aspect-[4/3]">
+                    <img src="./Images/index/Tartelette_mousse_pistache.webp" alt="Tartelette mousse pistache, dessert fait maison" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="rounded-xl overflow-hidden section-ombre aspect-[4/3]">
+                    <img src="./Images/index/Plat_signature_2.webp" alt="Plat signature du jour, produits locaux et terroir auvergnat" class="w-full h-full object-cover" loading="lazy">
+                </div>
+            </div>
+            <p class="text-center mt-10">
+                <a href="cuisine.html" class="text-[#a19e04] font-playball text-xl hover:text-[#3c5a09] transition underline decoration-[#a19e04]/50 underline-offset-4">Découvrir notre cuisine →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Citation -->
+    <section class="py-12 sm:py-16 bg-[#faf0ea] border-y border-[#a19e04]/20">
+        <div class="container mx-auto px-4 sm:px-6 max-w-5xl text-center">
+            <p class="text-xl sm:text-2xl md:text-3xl text-[#3c5a09] italic font-serif">« Ici, chaque assiette raconte un bout d'Auvergne. »</p>
+            <p class="mt-4 text-[#a19e04] font-playball text-xl">— L'équipe du Goût des Volcans</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-12 sm:py-16 md:py-20 bg-[#a19e04]">
+        <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-playball text-[#faf0ea] text-center mb-8 sm:mb-12">Notre Menu de la Semaine</h2>
+            
+            <!-- Formules -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto mb-10 sm:mb-16">
+                <!-- Formule Déjeuner -->
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg hover:shadow-xl hover:border-[#a19e04]/40 border-2 border-[#a19e04]/20 transition">
+                    <div class="text-4xl mb-4">🥄</div>
+                    <h3 class="text-2xl font-playball text-[#3c5a09] mb-2">Formule Déjeuner</h3>
+                    <p class="text-lg text-[#3c5a09]/80 mb-4">Entrée + Plat ou Plat + Dessert</p>
+                    <p class="text-2xl font-serif font-bold text-[#a19e04]">20€</p>
+                </div>
+
+                <!-- Formule Complète -->
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg hover:shadow-xl hover:border-[#a19e04]/40 border-2 border-[#a19e04]/20 transition">
+                    <div class="text-4xl mb-4">🍽️</div>
+                    <h3 class="text-2xl font-playball text-[#3c5a09] mb-2">Formule Complète</h3>
+                    <p class="text-lg text-[#3c5a09]/80 mb-4">Entrée + Plat + Dessert</p>
+                    <p class="text-2xl font-serif font-bold text-[#a19e04]">25€</p>
+                </div>
+
+                <!-- Formule Végétale -->
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg hover:shadow-xl hover:border-[#a19e04]/40 border-2 border-[#a19e04]/20 transition">
+                    <div class="text-4xl mb-4">🌿</div>
+                    <h3 class="text-2xl font-playball text-[#3c5a09] mb-2">Formule Végétarienne</h3>
+                    <p class="text-lg text-[#3c5a09]/80 mb-4">100% végétarien</p>
+                    <p class="text-2xl font-serif font-bold text-[#a19e04]">25€</p>
+                </div>
+            </div>
+
+            <!-- Exemple de Menu -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+                <!-- Entrées -->
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg border border-[#a19e04]/15 hover:shadow-xl transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-2">🥗</span>
+                            <h3 class="text-2xl font-playball text-[#3c5a09]">Entrées</h3>
+                        </div>
+                        <span class="text-2xl font-serif font-bold text-[#a19e04]">6,50€</span>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="font-serif">
+                            <p class="text-lg">Soupe d'épluchures aux herbes sauvages</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Salade de lentilles blondes aux noix</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Tarte fine aux oignons confits & crème de tomme</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Velouté de potimarron aux châtaignes</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Plats -->
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg border border-[#a19e04]/15 hover:shadow-xl transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-2">🍖</span>
+                            <h3 class="text-2xl font-playball text-[#3c5a09]">Plats</h3>
+                        </div>
+                        <span class="text-2xl font-serif font-bold text-[#a19e04]">15,50€</span>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="font-serif">
+                            <p class="text-lg">Croquettes de fromage à la tomme fondue</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Potée auvergnate revisitée</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Œuf mollet, purée de légumes oubliés & chips de panais</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Sauté de bœuf fermier, gratin de courge & herbes</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Desserts -->
+                <div class="bg-[#faf0ea] p-6 rounded-xl shadow-lg border border-[#a19e04]/15 hover:shadow-xl transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-2">🧁</span>
+                            <h3 class="text-2xl font-playball text-[#3c5a09]">Desserts</h3>
+                        </div>
+                        <span class="text-2xl font-serif font-bold text-[#a19e04]">6,50€</span>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="font-serif">
+                            <p class="text-lg">Pain perdu salé au bleu d'Auvergne</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Compotée de pommes locales</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Gâteau moelleux à la peau de banane</p>
+                        </li>
+                        <li class="font-serif">
+                            <p class="text-lg">Crème de marrons & spéculos maison</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="menu.html" class="inline-block bg-[#faf0ea] text-[#a19e04] px-8 py-3 rounded-lg border-2 border-[#faf0ea] shadow-lg hover:opacity-90 hover:shadow-xl transition font-playball font-bold text-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#faf0ea] focus:ring-offset-2 focus:ring-offset-[#a19e04]">
+                    Voir le menu complet
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ils en parlent -->
+    <section class="py-12 sm:py-16 bg-[#faf0ea] border-y-2 border-[#a19e04]/25 relative overflow-hidden" aria-label="Avis clients">
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#a19e04]/50 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#a19e04]/30 to-transparent"></div>
+        <div class="container mx-auto px-4 sm:px-6 max-w-5xl">
+            <h2 class="text-3xl sm:text-4xl font-playball text-[#a19e04] text-center mb-8 sm:mb-12">Ils en parlent</h2>
+            <div class="relative min-h-[220px] md:min-h-[200px]">
+                <div class="avis-slide absolute inset-0 flex flex-col justify-center text-center opacity-0 transition-opacity duration-500" data-slide="0">
+                    <p class="text-[#3c5a09] text-xl md:text-2xl font-playball leading-relaxed mb-4">« Un vrai coup de cœur. On sent la passion dans l'assiette et l'accueil. On reviendra ! »</p>
+                    <p class="text-[#3c5a09] font-medium text-lg">— Marie & Thomas, Clermont-Ferrand</p>
+                </div>
+                <div class="avis-slide absolute inset-0 flex flex-col justify-center text-center opacity-0 transition-opacity duration-500" data-slide="1">
+                    <p class="text-[#3c5a09] text-xl md:text-2xl font-playball leading-relaxed mb-4">« Enfin un restaurant qui assume le local et le bio sans en faire des tonnes. Les plats sont généreux, l'équipe adorable. »</p>
+                    <p class="text-[#3c5a09] font-medium text-lg">— Sophie, Riom</p>
+                </div>
+                <div class="avis-slide absolute inset-0 flex flex-col justify-center text-center opacity-0 transition-opacity duration-500" data-slide="2">
+                    <p class="text-[#3c5a09] text-xl md:text-2xl font-playball leading-relaxed mb-4">« On y vient en famille depuis l'ouverture. Les enfants adorent, et nous on se régale. Une adresse qu'on garde précieusement. »</p>
+                    <p class="text-[#3c5a09] font-medium text-lg">— Les Durand, Chamalières</p>
+                </div>
+                <div class="avis-slide absolute inset-0 flex flex-col justify-center text-center opacity-0 transition-opacity duration-500" data-slide="3">
+                    <p class="text-[#3c5a09] text-xl md:text-2xl font-playball leading-relaxed mb-4">« Cuisine inventive qui respecte les produits. Le Saint-Nectaire en déclinaison était une tuerie. Bravo à toute l'équipe ! »</p>
+                    <p class="text-[#3c5a09] font-medium text-lg">— Pierre, Lyon</p>
+                </div>
+                <div class="avis-slide absolute inset-0 flex flex-col justify-center text-center opacity-0 transition-opacity duration-500" data-slide="4">
+                    <p class="text-[#3c5a09] text-xl md:text-2xl font-playball leading-relaxed mb-4">« L'endroit parfait pour un déjeuner entre amis. Cadre chaleureux, carte qui change, et une vraie philosophie derrière. »</p>
+                    <p class="text-[#3c5a09] font-medium text-lg">— Camille & Léa, Clermont-Ferrand</p>
+                </div>
+            </div>
+            <div class="flex justify-center items-center gap-6 mt-8">
+                <button type="button" id="avisPrev" class="p-3 min-w-[44px] min-h-[44px] rounded-full text-[#3c5a09] hover:bg-[#3c5a09]/10 transition flex items-center justify-center" aria-label="Avis précédent">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <div class="flex gap-2" id="avisDots" aria-hidden="true"></div>
+                <button type="button" id="avisNext" class="p-3 min-w-[44px] min-h-[44px] rounded-full text-[#3c5a09] hover:bg-[#3c5a09]/10 transition flex items-center justify-center" aria-label="Avis suivant">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="py-12 sm:py-16 md:py-20 bg-[#a19e04] relative overflow-hidden" aria-label="Passer à l'action">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#3c5a09]/25 to-transparent pointer-events-none" aria-hidden="true"></div>
+        <div class="container mx-auto px-4 sm:px-6 max-w-4xl relative text-center">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-playball text-[#faf0ea] mb-2 sm:mb-3">Une table vous attend</h2>
+            <p class="text-[#faf0ea]/95 text-base sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-xl mx-auto px-2">Découvrez notre carte ou réservez votre table, nous vous attendons avec plaisir place Jaude.</p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+                <a href="menu.html" class="inline-flex items-center justify-center gap-2 bg-[#faf0ea] text-[#3c5a09] px-8 py-4 rounded-xl font-playball font-bold text-xl shadow-lg hover:bg-[#f4c36f] hover:shadow-xl transition focus:outline-none focus:ring-2 focus:ring-[#faf0ea] focus:ring-offset-2 focus:ring-offset-[#a19e04]">
+                    Découvrir notre carte
+                </a>
+                <a href="contact.html" class="inline-flex items-center justify-center gap-2 border-2 border-[#faf0ea] text-[#faf0ea] px-8 py-4 rounded-xl font-playball font-bold text-xl hover:bg-[#faf0ea] hover:text-[#a19e04] transition focus:outline-none focus:ring-2 focus:ring-[#faf0ea] focus:ring-offset-2 focus:ring-offset-[#a19e04]">
+                    Réserver une table
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nous retrouver -->
+    <section class="py-12 sm:py-16 md:py-20 bg-nature-pattern">
+        <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-playball text-[#a19e04] text-center mb-8 sm:mb-12">Nous retrouver</h2>
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-start">
+                <div>
+                    <h3 class="text-2xl font-playball text-[#3c5a09] mb-4">Horaires</h3>
+                    <p class="text-lg text-[#3c5a09] mb-2">Mardi au samedi</p>
+                    <p class="text-lg text-[#3c5a09] mb-6">12h – 14h30 &nbsp;·&nbsp; 19h – 22h</p>
+                    <p class="text-lg text-[#3c5a09]/80">Fermé dimanche et lundi. Nous vous conseillons de réserver pour le soir et le week-end.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-playball text-[#3c5a09] mb-4">L'ambiance</h3>
+                    <p class="text-lg text-[#3c5a09] text-justify">Une salle chaleureuse, une cuisine ouverte sur la salle, et une terrasse pour déjeuner au soleil quand il fait beau. Chez nous, on prend le temps de manger bien et de faire vivre le lien avec nos producteurs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bande verte -->
+    <section class="py-8 bg-[#a19e04]">
+        <div class="container mx-auto px-6 max-w-5xl text-center">
+            <p class="text-[#faf0ea] font-playball text-xl">À très bientôt place Jaude.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#faf0ea] text-[#3c5a09] py-20 text-lg">
+        <div class="w-full px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-16 lg:gap-16 xl:gap-24 w-full">
+                <!-- Colonne 1 : Logo et adresse -->
+                <div class="flex flex-col items-center text-center">
+                    <a href="index.html" class="inline-block mb-6 hover:opacity-90 transition">
+                        <img src="Logo principal.png" alt="Le Goût des Volcans" class="h-20 w-auto object-contain">
+                    </a>
+                    <address class="text-[#3c5a09] not-italic leading-relaxed">
+                        40 place Jaude<br>
+                        63000 Clermont-Ferrand
+                    </address>
+                </div>
+                <!-- Colonne 2 : Contact -->
+                <div class="flex flex-col items-center text-center">
+                    <p class="font-semibold text-[#3c5a09] mb-2">Téléphone :</p>
+                    <p class="mb-6 text-[#3c5a09]">04 73 00 00 00</p>
+                    <p class="font-semibold text-[#3c5a09] mb-2">Mail :</p>
+                    <p class="text-[#3c5a09]">bonjour@legoutdesvolcans.fr</p>
+                </div>
+                <!-- Colonne 3 : Navigation -->
+                <div class="flex flex-col items-center text-center">
+                    <nav class="flex flex-col space-y-4 items-center">
+                        <a href="index.html" class="text-[#a19e04] font-semibold hover:text-[#a19e04] transition" aria-current="page">Accueil</a>
+                        <a href="histoire.html" class="text-[#3c5a09] hover:text-[#f4c36f] transition">Notre Histoire</a>
+                        <a href="cuisine.html" class="text-[#3c5a09] hover:text-[#f4c36f] transition">Notre Cuisine</a>
+                        <a href="menu.html" class="text-[#3c5a09] hover:text-[#f4c36f] transition">Menu</a>
+                        <a href="contact.html" class="text-[#3c5a09] hover:text-[#f4c36f] transition">Contact</a>
+                    </nav>
+                </div>
+                <!-- Colonne 4 : Réseaux sociaux -->
+                <div class="flex flex-col items-center text-center">
+                    <p class="text-[#3c5a09] mb-6 leading-snug">Suivez-nous sur les<br>réseaux sociaux</p>
+                    <div class="flex gap-6 justify-center">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-[#3c5a09] hover:text-[#f4c36f] transition" aria-label="Instagram">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="text-[#3c5a09] hover:text-[#f4c36f] transition" aria-label="Facebook">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="text-[#3c5a09] hover:text-[#f4c36f] transition" aria-label="X (Twitter)">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox plein écran pour la galerie -->
+    <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/95 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Photo en grand">
+        <button type="button" id="lightboxClose" class="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/10 text-white hover:bg-white/20 flex items-center justify-center transition z-10" aria-label="Fermer">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <button type="button" id="lightboxPrev" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 text-white hover:bg-white/20 flex items-center justify-center transition z-10" aria-label="Photo précédente">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button type="button" id="lightboxNext" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 text-white hover:bg-white/20 flex items-center justify-center transition z-10" aria-label="Photo suivante">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+        <img id="lightboxImg" src="" alt="" class="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-lg">
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-terracotta text-cream p-3 rounded-full shadow-lg hover:bg-terracotta/80 transition opacity-0 invisible">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <script>
+        // Menu mobile
+        (function() {
+            var navToggle = document.getElementById('navToggle');
+            var navMobile = document.getElementById('navMobile');
+            if (navToggle && navMobile) {
+                navToggle.addEventListener('click', function() {
+                    var open = !navMobile.classList.contains('hidden');
+                    navMobile.classList.toggle('hidden', open);
+                    navToggle.setAttribute('aria-expanded', !open);
+                    navToggle.setAttribute('aria-label', open ? 'Ouvrir le menu' : 'Fermer le menu');
+                });
+            }
+        })();
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Carousel avis (Ils en parlent)
+        (function() {
+            const slides = document.querySelectorAll('.avis-slide');
+            const prevBtn = document.getElementById('avisPrev');
+            const nextBtn = document.getElementById('avisNext');
+            const dotsEl = document.getElementById('avisDots');
+            if (!slides.length || !dotsEl) return;
+            let current = 0;
+            let timer;
+
+            function showSlide(index) {
+                current = (index + slides.length) % slides.length;
+                slides.forEach((s, i) => {
+                    s.classList.toggle('opacity-100', i === current);
+                    s.classList.toggle('opacity-0', i !== current);
+                });
+                dotsEl.querySelectorAll('button').forEach((d, i) => {
+                    d.setAttribute('aria-current', i === current ? 'true' : 'false');
+                    d.classList.toggle('bg-[#3c5a09]', i === current);
+                    d.classList.toggle('bg-[#3c5a09]/30', i !== current);
+                });
+            }
+
+            function next() { showSlide(current + 1); resetTimer(); }
+            function prev() { showSlide(current - 1); resetTimer(); }
+            function resetTimer() {
+                clearInterval(timer);
+                timer = setInterval(next, 5000);
+            }
+
+            slides.forEach((_, i) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'w-2.5 h-2.5 rounded-full transition ' + (i === 0 ? 'bg-[#3c5a09]' : 'bg-[#3c5a09]/30');
+                btn.setAttribute('aria-label', 'Avis ' + (i + 1));
+                btn.setAttribute('aria-current', i === 0 ? 'true' : 'false');
+                btn.addEventListener('click', () => { showSlide(i); resetTimer(); });
+                dotsEl.appendChild(btn);
+            });
+
+            if (prevBtn) prevBtn.addEventListener('click', prev);
+            if (nextBtn) nextBtn.addEventListener('click', next);
+            showSlide(0);
+            timer = setInterval(next, 5000);
+        })();
+
+        // Lightbox galerie Quelques instants
+        (function() {
+            var gallery = document.getElementById('galerie-instant');
+            if (!gallery) return;
+            var imgs = gallery.querySelectorAll('img');
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightboxImg');
+            var lightboxClose = document.getElementById('lightboxClose');
+            var lightboxPrev = document.getElementById('lightboxPrev');
+            var lightboxNext = document.getElementById('lightboxNext');
+            var srcs = Array.from(imgs).map(function(img) { return img.src; });
+            var alts = Array.from(imgs).map(function(img) { return img.alt || ''; });
+            var idx = 0;
+
+            function openLightbox(i) {
+                idx = i;
+                lightboxImg.src = srcs[idx];
+                lightboxImg.alt = alts[idx];
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeLightbox() {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                document.body.style.overflow = '';
+            }
+            function showPrev() {
+                idx = (idx - 1 + srcs.length) % srcs.length;
+                lightboxImg.src = srcs[idx];
+                lightboxImg.alt = alts[idx];
+            }
+            function showNext() {
+                idx = (idx + 1) % srcs.length;
+                lightboxImg.src = srcs[idx];
+                lightboxImg.alt = alts[idx];
+            }
+
+            imgs.forEach(function(img, i) {
+                img.closest('div').addEventListener('click', function() { openLightbox(i); });
+            });
+            if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+            if (lightboxPrev) lightboxPrev.addEventListener('click', showPrev);
+            if (lightboxNext) lightboxNext.addEventListener('click', showNext);
+            if (lightbox) lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener('keydown', function(e) {
+                if (!lightbox || lightbox.classList.contains('hidden')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') showPrev();
+                if (e.key === 'ArrowRight') showNext();
+            });
+        })();
+    </script>
+</body>
+</html> 
